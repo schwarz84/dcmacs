@@ -90,19 +90,22 @@ La configuración de `dcmacs` está organizada modularmente en archivos `.org`, 
 │   ├── ui.org                # Apariencia, fuentes, ligaduras, theme, modeline, íconos.
 │   ├── keybindings.org       # Atajos personalizados y configuración de which-key.
 │   ├── tools.org             # Herramientas: vterm, magit, forge, consult, embark, diff-hl, alert.
+│   ├── functions.org         # Funciones propias reutilizables.
 │   ├── project-management.org# Gestión de proyectos: projectile, treemacs, consult-project-extra, hydras.
 │   ├── python.org            # Entorno Python, virtualenv, completado, flycheck, pyenv, pipenv.
-│   ├── jupyter.org           # Jupyter Notebooks con `ein`, `jupyter-mode`, org-babel, gráficos.
+│   ├── jupyter.org           # Jupyter Notebooks con ein, jupyter-mode, org-babel, gráficos.
+│   ├── r.org                 # Soporte completo para R con ESS y org-babel.
+│   ├── data.org              # Herramientas de manejo de datos: Pandas, Polars, DuckDB, SQLite3, csv-mode.
+│   ├── ml.org                # Configuración de ML/DL: PyTorch, TensorFlow, ONNX, Sklearn, Optuna.
 │   ├── orgmode.org           # org-mode avanzado: agenda, enlaces, exportación, literate programming.
 │   ├── dashboard.org         # dashboard.el, vista inicial con accesos rápidos y agenda semanal.
-│   ├── ml.org                # Configuración de ML/DL: PyTorch, TensorFlow, ONNX, Sklearn, Optuna.
-│   ├── r.org                 # Soporte completo para R con ESS y org-babel.
 │   ├── calendar.org          # Integración con Google Calendar (org-gcal) y eventos personalizados.
 │   ├── export.org            # Exportaciones a PDF, HTML, Reveal.js, LaTeX, Markdown.
 │   ├── mail.org              # Cliente de correo con mu4e, notmuch y org-msg.
-│   └── data.org              # Herramientas de manejo de datos: Pandas, Polars, DuckDB, SQLite3, csv-mode.
 ├── lisp/                     # Funciones personalizadas que no van en los módulos .org.
+│                             # (Reservado: se activará desde functions.org cuando sea necesario)
 ├── snippets/                 # Directorio de snippets para yasnippet.
+│                             # (Reservado: se activará desde tools.org al configurar yasnippet)
 ├── assets/                   # Capturas de pantalla, íconos, logos, recursos externos.
 └── scripts/                  # Scripts auxiliares (ej: install-arch.sh para instalación automatizada).
 ```
@@ -144,4 +147,4 @@ Si querés proponer mejoras, reportar problemas o colaborar en el desarrollo:
 
 Próximamente se incluirá una guía para contribuir y una hoja de ruta con próximos módulos y mejoras.
 
-Toda colaboración es bienvenida mientras respete la filosofía del proyecto: claridad, utilidad y simplicidad.	
+Toda colaboración es bienvenida mientras respete la filosofía del proyecto: claridad, utilidad y simplicidad.

@@ -1,0 +1,46 @@
+#+TITLE: init.org
+#+DESCRIPTION: Archivo de entrada para cargar la configuración completa de dcmacs.
+
+* Descripción
+
+Este archivo es el punto de inicio de la configuración modular de dcmacs.
+Su único propósito es cargar los módulos definidos en la carpeta `config/` en el orden correcto.
+
+---
+
+* Módulos base
+
+#+begin_src emacs-lisp
+  (org-babel-load-file (expand-file-name "config/core.org" dcmacs-dir))
+  (org-babel-load-file (expand-file-name "config/packages.org" dcmacs-dir))
+  (org-babel-load-file (expand-file-name "config/ui.org" dcmacs-dir))
+  (org-babel-load-file (expand-file-name "config/keybindings.org" dcmacs-dir))
+#+end_src
+
+* Funciones y herramientas
+
+#+begin_src emacs-lisp
+  (org-babel-load-file (expand-file-name "config/functions.org" dcmacs-dir))
+  (org-babel-load-file (expand-file-name "config/tools.org" dcmacs-dir))
+#+end_src
+
+* Proyecto y desarrollo
+
+#+begin_src emacs-lisp
+  (org-babel-load-file (expand-file-name "config/project-management.org" dcmacs-dir))
+  (org-babel-load-file (expand-file-name "config/python.org" dcmacs-dir))
+  (org-babel-load-file (expand-file-name "config/jupyter.org" dcmacs-dir))
+  (org-babel-load-file (expand-file-name "config/r.org" dcmacs-dir))
+  (org-babel-load-file (expand-file-name "config/data.org" dcmacs-dir))
+  (org-babel-load-file (expand-file-name "config/ml.org" dcmacs-dir))
+#+end_src
+
+* Org Mode y productividad
+
+#+begin_src emacs-lisp
+  (org-babel-load-file (expand-file-name "config/orgmode.org" dcmacs-dir))
+  (org-babel-load-file (expand-file-name "config/dashboard.org" dcmacs-dir))
+  (org-babel-load-file (expand-file-name "config/calendar.org" dcmacs-dir))
+  (org-babel-load-file (expand-file-name "config/export.org" dcmacs-dir))
+  (org-babel-load-file (expand-file-name "config/mail.org" dcmacs-dir))
+#+end_src
